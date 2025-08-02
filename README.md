@@ -34,10 +34,11 @@ Si deseas conocer más sobre mi trabajo o colaborar en algún proyecto, puedes c
 
 - GitHub: [@CristoferBV](https://github.com/CristoferBV)
 - LinkedIn: [Cristofer David Barrios Valverde](https://www.linkedin.com/in/cristofer-barrios-valverde-057927274/)
-- Email: (barriosvalverdecristofer@gmail.com)
+- Email: barriosvalverdecristofer@gmail.com
 
 ---
 
 Gracias por visitar este repositorio. ¡Espero que mi portafolio sea de tu interés!
+
 
 
