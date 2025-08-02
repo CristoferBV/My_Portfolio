@@ -33,9 +33,10 @@ El portafolio está diseñado con un enfoque moderno, limpio y responsivo, utili
 Si deseas conocer más sobre mi trabajo o colaborar en algún proyecto, puedes contactarme a través de:
 
 - GitHub: [@CristoferBV](https://github.com/CristoferBV)
-- LinkedIn: [Cristofer David Barrios Valverde](https://www.linkedin.com/in/andrey-dbv/)
-- Email: *(opcional, añade si quieres)*
+- LinkedIn: [Cristofer David Barrios Valverde](https://www.linkedin.com/in/cristofer-barrios-valverde-057927274/)
+- Email: [Cristofer David Barrios Valverde](barriosvalverdecristofer@gmail.com)
 
 ---
 
 Gracias por visitar este repositorio. ¡Espero que mi portafolio sea de tu interés!
+
