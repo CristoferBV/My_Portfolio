@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { ExternalLink, Github, X, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Github, X, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
 const Projects = () => {
@@ -16,70 +16,59 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: 'E-Commerce Platform',
-      description: 'Plataforma completa de comercio electrónico con React, Node.js y MongoDB.',
-      longDescription: 'Una aplicación de comercio electrónico completa que incluye autenticación de usuarios, carrito de compras, procesamiento de pagos con Stripe, panel de administración y gestión de inventario. Desarrollada con React, Node.js, Express y MongoDB.',
-      image: 'https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=800',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Stripe', 'Tailwind CSS'],
-      github: '#',
+      title: 'Face Security Guard',
+      description: 'Seguridad facial con OpenCV y Python',
+      longDescription: 'Una aplicación de seguridad facial que utiliza OpenCV y Python para detectar y reconocer rostros en tiempo real. Incluye características como autenticación de usuarios y gestión de acceso.',
+      image: '/Face Security Guard.jpeg',
+      technologies: ['Python', 'OpenCV', 'MongoDB', 'AI', 'Machine Learning'],
+      github: 'https://github.com/jocscriptch/Face_Security_Guard',
       demo: '#',
       category: 'fullstack'
     },
     {
       id: 2,
-      title: 'Task Management App',
-      description: 'Aplicación de gestión de tareas con funcionalidades avanzadas y colaboración en tiempo real.',
-      longDescription: 'Una aplicación de productividad que permite a los equipos colaborar en tiempo real. Incluye funciones como asignación de tareas, seguimiento de progreso, notificaciones push y integración con calendarios. Construida con React, Socket.io y Firebase.',
-      image: 'https://images.pexels.com/photos/1181354/pexels-photo-1181354.jpeg?auto=compress&cs=tinysrgb&w=800',
-      technologies: ['React', 'Socket.io', 'Firebase', 'Material-UI'],
-      github: '#',
+      title: 'System PAUNA',
+      description: 'Portal exclusivo para la biblioteca y administración del Campus Coto de la Universidad Nacional de Costa Rica.',
+      longDescription: 'Un sistema integral para la gestión de la biblioteca y administración del campus, que permite a los estudiantes acceder a recursos académicos, gestionar préstamos y consultar información relevante. Incluye un panel de administración para gestionar usuarios y recursos.',
+      image: '/System PAUNA.png',
+      technologies: ['React', 'Next.js', 'MySQL', 'Bootstrap', 'Node.js'],
+      github: 'https://github.com/CristoferBV/system_pauna',
       demo: '#',
-      category: 'frontend'
+      category: 'fullstack'
     },
     {
       id: 3,
-      title: 'Weather Dashboard',
-      description: 'Dashboard interactivo del clima con visualizaciones de datos y pronósticos.',
-      longDescription: 'Un dashboard completo del clima que muestra pronósticos detallados, mapas interactivos, datos históricos y alertas meteorológicas. Utiliza APIs múltiples para obtener datos precisos y presenta la información de manera visualmente atractiva.',
-      image: 'https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=800',
-      technologies: ['React', 'D3.js', 'Weather API', 'Chart.js'],
-      github: '#',
+      title: 'TranscriptImages',
+      description: 'OCR para documentos de construcción',
+      longDescription: 'Una aplicación web integral para dispositivos móviles diseñada para que las empresas de construcción de muebles capturen, procesen y organicen documentos de construcción utilizando tecnología OCR.',
+      image: '/Transcript Images.png',
+      technologies: ['React', 'Vite', 'Tailwind CSS', 'Firebase', 'Google Cloud Vision API'],
+      github: 'https://github.com/CristoferBV/TranscriptImages',
       demo: '#',
-      category: 'frontend'
+      category: 'fullstack'
     },
     {
       id: 4,
-      title: 'Social Media Analytics',
-      description: 'Herramienta de análisis para redes sociales con métricas detalladas y reportes.',
-      longDescription: 'Una plataforma completa de análisis de redes sociales que ayuda a las empresas a rastrear su rendimiento, analizar el engagement y generar reportes detallados. Incluye integración con múltiples plataformas sociales y visualizaciones avanzadas.',
-      image: 'https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=800',
-      technologies: ['Next.js', 'PostgreSQL', 'Prisma', 'Chart.js'],
-      github: '#',
+      title: 'WalletCompass',
+      description: 'Simulacion de billetera virtual con tarjetas, cedulas y carnet estudiantil.',
+      longDescription: 'Una aplicación movil que simula una billetera virtual, permitiendo a los usuarios gestionar sus tarjetas, cédulas y carnets estudiantiles de manera eficiente.',
+      image: '/WalletCompass.jpeg',
+      technologies: ['Dart', 'Flutter', 'Firebase'],
+      github: 'https://github.com/AndreyBV5/walletcompass_project',
       demo: '#',
       category: 'fullstack'
     },
     {
       id: 5,
-      title: 'Portfolio Website',
-      description: 'Sitio web personal con animaciones avanzadas y diseño responsivo.',
-      longDescription: 'Un portafolio personal moderno con animaciones fluidas, efectos de parallax y diseño completamente responsivo. Incluye un CMS personalizado para gestionar proyectos y un blog integrado.',
-      image: 'https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800',
-      technologies: ['React', 'Framer Motion', 'Tailwind CSS', 'Contentful'],
-      github: '#',
+      title: 'Servidores Redes',
+      description: 'Sistema P2P con múltiples servidores y clientes',
+      longDescription: 'Este proyecto implementa un sistema peer-to-peer (P2P) con múltiples servidores y clientes. El servidor almacena videos en una ruta local y gestiona solicitudes de descarga mediante TCP.',
+      image: '/Servidores Redes.jpeg',
+      technologies: ['Python', 'VS Code', 'TCP/IP', 'P2P', 'Sockets'],
+      github: 'https://github.com/AndreyBV5/Proyecto_Servidores_Redes',
       demo: '#',
       category: 'frontend'
     },
-    {
-      id: 6,
-      title: 'AI Chat Application',
-      description: 'Aplicación de chat inteligente con integración de IA y procesamiento de lenguaje natural.',
-      longDescription: 'Una aplicación de chat avanzada que utiliza inteligencia artificial para proporcionar respuestas inteligentes y asistencia automatizada. Incluye reconocimiento de voz, traducción en tiempo real y análisis de sentimientos.',
-      image: 'https://images.pexels.com/photos/8386434/pexels-photo-8386434.jpeg?auto=compress&cs=tinysrgb&w=800',
-      technologies: ['React', 'OpenAI API', 'WebSocket', 'Python'],
-      github: '#',
-      demo: '#',
-      category: 'fullstack'
-    }
   ];
 
   const categories = ['all', 'frontend', 'fullstack'];
@@ -189,11 +178,11 @@ const Projects = () => {
                 className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl overflow-hidden group hover:border-indigo-400/50 transition-colors cursor-pointer"
                 onClick={() => setSelectedProject(project.id)}
               >
-                <div className="relative overflow-hidden">
+                <div className="relative overflow-hidden bg-gray-900 aspect-video">
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
+                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
                     <div className="absolute bottom-4 left-4 right-4">
@@ -208,17 +197,6 @@ const Projects = () => {
                           }}
                         >
                           <Github size={16} />
-                        </motion.button>
-                        <motion.button
-                          whileHover={{ scale: 1.1 }}
-                          whileTap={{ scale: 0.9 }}
-                          className="w-8 h-8 bg-gray-800/80 backdrop-blur-sm rounded-full flex items-center justify-center text-gray-300 hover:text-indigo-400"
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            window.open(project.demo, '_blank');
-                          }}
-                        >
-                          <ExternalLink size={16} />
                         </motion.button>
                       </div>
                     </div>
@@ -279,7 +257,7 @@ const Projects = () => {
                         <img
                           src={project.image}
                           alt={project.title}
-                          className="w-full h-64 object-cover"
+                          className="object-contain max-h-80 w-full mx-auto"
                         />
                         <div className="absolute top-4 right-4 flex space-x-2">
                           <button
@@ -338,17 +316,6 @@ const Projects = () => {
                           >
                             <Github size={20} />
                             <span>{t('projects.viewCode')}</span>
-                          </motion.a>
-                          <motion.a
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                            href={project.demo}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center space-x-2 px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors"
-                          >
-                            <ExternalLink size={20} />
-                            <span>{t('projects.viewDemo')}</span>
                           </motion.a>
                         </div>
                       </div>

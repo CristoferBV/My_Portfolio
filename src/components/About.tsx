@@ -11,9 +11,9 @@ const About = () => {
   });
 
   const stats = [
-    { icon: Code2, value: '50+', label: t('about.stat1') },
-    { icon: Users, value: '30+', label: t('about.stat2') },
-    { icon: Award, value: '5', label: t('about.stat3') },
+    { icon: Code2, value: '6+', label: t('about.stat1') },
+    { icon: Users, value: '3+', label: t('about.stat2') },
+    { icon: Award, value: '1', label: t('about.stat3') },
     { icon: Coffee, value: '∞', label: t('about.stat4') },
   ];
 
@@ -61,23 +61,29 @@ const About = () => {
             </div>
           </motion.div>
 
-          <motion.div
-            variants={itemVariants}
-            className="relative"
-          >
+          <motion.div variants={itemVariants} className="relative">
             <div className="relative w-full h-96 bg-gradient-to-br from-indigo-600 to-purple-600 rounded-2xl overflow-hidden">
+              
+              {/* Imagen centrada */}
+              <img
+                src="/Cristofer Barrios Valverde.png"
+                alt="Cristofer Barrios Valverde"
+                className="absolute inset-0 w-full h-full object-contain opacity-92 p-2 scale-110"
+              />
+
               <div className="absolute inset-0 bg-black/20"></div>
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
-              <div className="absolute bottom-4 left-4 text-white">
+              <div className="absolute bottom-4 left-4 text-white z-10">
                 <p className="text-lg font-semibold">Cristofer Barrios Valverde</p>
                 <p className="text-sm opacity-80">Desarrollador FullStack</p>
               </div>
-              
-              {/* Decorative elements */}
-              <div className="absolute -top-4 -right-4 w-24 h-24 bg-indigo-400/20 rounded-full blur-xl"></div>
-              <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-purple-400/20 rounded-full blur-xl"></div>
+
+              {/* Decoratives elements */}
+              <div className="absolute -top-4 -right-4 w-24 h-24 bg-indigo-400/20 rounded-full blur-xl z-0"></div>
+              <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-purple-400/20 rounded-full blur-xl z-0"></div>
             </div>
           </motion.div>
+
         </motion.div>
 
         {/* Stats Section */}

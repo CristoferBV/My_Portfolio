@@ -13,11 +13,16 @@ const Skills = () => {
     {
       title: t('skills.frontend'),
       skills: [
+        { name: 'HTML5', level: 95 },
+        { name: 'CSS3', level: 90 },
+        { name: 'Tailwind CSS', level: 90 },
+        { name: 'Bootstrap', level: 85 },
         { name: 'React', level: 90 },
+        { name: 'Angular', level: 80 },
         { name: 'TypeScript', level: 85 },
-        { name: 'Next.js', level: 80 },
-        { name: 'Tailwind CSS', level: 95 },
-        { name: 'Framer Motion', level: 75 },
+        { name: 'Next.js', level: 75 },
+        { name: 'JavaScript', level: 85 },
+        { name: 'Flutter', level: 75 },
       ],
     },
     {
@@ -25,22 +30,32 @@ const Skills = () => {
       skills: [
         { name: 'Node.js', level: 80 },
         { name: 'Express', level: 75 },
+        { name: 'Django', level: 85 },
+        { name: 'Python', level: 80 },
+        { name: 'PHP', level: 65 },
+        { name: 'Postman', level: 90 },
+        { name: 'MySQL', level: 80 },
         { name: 'MongoDB', level: 70 },
-        { name: 'PostgreSQL', level: 65 },
-        { name: 'GraphQL', level: 60 },
+        { name: 'Firebase', level: 70 },
+        { name: 'REST APIs', level: 80 },
       ],
     },
     {
       title: t('skills.tools'),
       skills: [
         { name: 'Git', level: 90 },
+        { name: 'GitHub / GitLab', level: 90 },
         { name: 'Docker', level: 70 },
-        { name: 'AWS', level: 65 },
-        { name: 'Figma', level: 85 },
-        { name: 'Webpack', level: 75 },
+        { name: 'Google Cloud Platform', level: 75 },
+        { name: 'Firebase Studio', level: 70 },
+        { name: 'VSCode', level: 95 },
+        { name: 'Postman', level: 90 },
+        { name: 'Figma', level: 80 },
+        { name: 'Scrum Mate', level: 80 },
       ],
     },
   ];
+
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -144,8 +159,8 @@ const Skills = () => {
             className="flex flex-wrap justify-center gap-4"
           >
             {[
-              'JavaScript', 'Python', 'Java', 'C++', 'HTML5', 'CSS3',
-              'Sass', 'Vue.js', 'Angular', 'Redux', 'Firebase', 'Supabase'
+              'Java', 'C++', 'Dart', 'SQLite', 'Oracle', 'Swagger',
+              'Selenium IDE', 'WordPress', 'face-api.js', 'Gemini AI'
             ].map((tech, index) => (
               <motion.span
                 key={index}
@@ -156,6 +171,7 @@ const Skills = () => {
               </motion.span>
             ))}
           </motion.div>
+
         </motion.div>
       </div>
     </section>

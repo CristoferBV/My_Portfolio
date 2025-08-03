@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter, MessageCircle } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Github, Linkedin, Instagram, MessageCircle } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const { t } = useLanguage();
@@ -19,6 +20,8 @@ const Contact = () => {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [alertMessage, setAlertMessage] = useState<string | null>(null);
+  const [alertType, setAlertType] = useState<'success' | 'error' | null>(null);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -31,12 +34,33 @@ const Contact = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    console.log('Form submitted:', formData);
-    setFormData({ name: '', email: '', subject: '', message: '' });
+    setAlertMessage(null);
+    setAlertType(null);
+
+    const templateParams = {
+      name: formData.name,
+      email: formData.email,
+      subject: formData.subject,
+      message: formData.message,
+    };
+
+    try {
+      const result = await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        templateParams,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      );
+      console.log('Email sent:', result.text);
+      setFormData({ name: '', email: '', subject: '', message: '' });
+      setAlertType('success');
+      setAlertMessage(t('contact.successMessage') || 'Email sent successfully.');
+    } catch (error) {
+      console.error('Failed to send email:', error);
+      setAlertType('error');
+      setAlertMessage(t('contact.errorMessage') || 'Failed to send email. Please try again.');
+    }
+
     setIsSubmitting(false);
   };
 
@@ -44,27 +68,27 @@ const Contact = () => {
     {
       icon: Mail,
       label: t('contact.emailLabel'),
-      value: 'tu@email.com',
-      href: 'mailto:tu@email.com',
+      value: 'barriosvalverdecristofer@gmail.com',
+      href: 'mailto:barriosvalverdecristofer@gmail.com',
     },
     {
       icon: Phone,
       label: t('contact.phoneLabel'),
-      value: '+1 (555) 123-4567',
-      href: 'tel:+15551234567',
+      value: '+506 8515-1229',
+      href: 'tel:+50685151229',
     },
     {
       icon: MapPin,
       label: t('contact.locationLabel'),
-      value: 'Ciudad, País',
-      href: '#',
+      value: 'San Isidro de El General, Costa Rica',
+      href: 'https://maps.app.goo.gl/nQXPixh6JYS71ofG8',
     },
   ];
 
   const socialLinks = [
-    { icon: Github, href: '#', label: 'GitHub', color: 'hover:text-gray-300' },
-    { icon: Linkedin, href: '#', label: 'LinkedIn', color: 'hover:text-blue-400' },
-    { icon: Twitter, href: '#', label: 'Twitter', color: 'hover:text-sky-400' },
+    { icon: Github, href: 'https://github.com/CristoferBV', label: 'GitHub', color: 'hover:text-gray-300' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/in/cristofer-barrios-valverde-057927274/', label: 'LinkedIn', color: 'hover:text-blue-400' },
+    { icon: Instagram, href: 'https://www.instagram.com/cristofer_barrios_valverde?igsh=djBxNGgwMXltZGg3', label: 'Instagram', color: 'hover:text-pink-400' },
   ];
 
   const containerVariants = {
@@ -115,7 +139,6 @@ const Contact = () => {
         </motion.div>
 
         <div className="grid lg:grid-cols-5 gap-12">
-          {/* Contact Information - Left Side */}
           <motion.div
             variants={containerVariants}
             initial="hidden"
@@ -134,7 +157,7 @@ const Contact = () => {
                   {t('contact.info')}
                 </h3>
               </div>
-              
+
               <div className="space-y-6 mb-8">
                 {contactInfo.map((info, index) => {
                   const Icon = info.icon;
@@ -184,7 +207,6 @@ const Contact = () => {
             </motion.div>
           </motion.div>
 
-          {/* Contact Form - Right Side */}
           <motion.div
             variants={containerVariants}
             initial="hidden"
@@ -195,6 +217,17 @@ const Contact = () => {
               variants={itemVariants}
               className="bg-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8"
             >
+              {alertMessage && (
+                <div
+                  className={`mb-6 px-4 py-3 rounded-xl text-sm font-medium ${
+                    alertType === 'success'
+                      ? 'bg-green-600/20 text-green-300 border border-green-400/20'
+                      : 'bg-red-600/20 text-red-300 border border-red-400/20'
+                  }`}
+                >
+                  {alertMessage}
+                </div>
+              )}
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid sm:grid-cols-2 gap-6">
                   <div>

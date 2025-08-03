@@ -23,9 +23,6 @@ const Footer = () => {
           </motion.button>
 
           <div className="text-center">
-            <h3 className="text-2xl font-bold bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent mb-2">
-              Portfolio
-            </h3>
             <p className="text-gray-400 max-w-md">
               {t('footer.tagline')}
             </p>

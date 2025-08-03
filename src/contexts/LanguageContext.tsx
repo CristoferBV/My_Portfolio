@@ -26,9 +26,9 @@ const translations: Translations = {
     // About
     'about.title': 'Sobre',
     'about.titleHighlight': 'Mí',
-    'about.description1': 'Soy un desarrollador frontend apasionado con más de 5 años de experiencia creando experiencias web excepcionales. Me especializo en React, TypeScript y tecnologías modernas de desarrollo.',
-    'about.description2': 'Mi enfoque se centra en crear interfaces de usuario intuitivas y performantes que no solo se ven increíbles, sino que también proporcionan una experiencia de usuario fluida y accesible.',
-    'about.description3': 'Cuando no estoy programando, me gusta explorar nuevas tecnologías, contribuir a proyectos open source y compartir conocimientos con la comunidad de desarrolladores.',
+    'about.description1': 'Soy un desarrollador fullstack egresado de la Universidad Nacional de Costa Rica, con experiencia práctica construyendo aplicaciones web y móviles. He trabajado con tecnologías como React, Angular, TypeScript, Django y Node.js.',
+    'about.description2': 'Mi enfoque está en crear soluciones intuitivas, accesibles y eficientes, aplicando buenas prácticas de desarrollo y metodologías ágiles. Me gusta integrar APIs, servicios en la nube e inteligencia artificial para agregar valor real.',
+    'about.description3': 'Cuando no estoy programando, disfruto investigar nuevas herramientas, aprender sobre automatización y compartir conocimientos con otros desarrolladores en espacios de colaboración y comunidad.',
     'about.stat1': 'Proyectos Completados',
     'about.stat2': 'Clientes Satisfechos',
     'about.stat3': 'Años de Experiencia',
@@ -73,11 +73,13 @@ const translations: Translations = {
     'contact.emailLabel': 'Email',
     'contact.phoneLabel': 'Teléfono',
     'contact.locationLabel': 'Ubicación',
-    
+    'contact.successMessage': 'Email enviado con éxito',
+    'contact.errorMessage': 'Error al enviar el email. Por favor, inténtalo de nuevo más tarde',
+
     // Footer
     'footer.madeWith': 'Hecho con',
     'footer.by': 'por Tu Nombre',
-    'footer.rights': 'Todos los derechos reservados.',
+    'footer.rights': 'Cristofer Barrios Valverde.',
     'footer.tagline': 'Transformando ideas en experiencias digitales extraordinarias',
   },
   en: {
@@ -146,6 +148,8 @@ const translations: Translations = {
     'contact.emailLabel': 'Email',
     'contact.phoneLabel': 'Phone',
     'contact.locationLabel': 'Location',
+    "contact.successMessage": "Email sent successfully",
+    "contact.errorMessage": "Failed to send email. Please try again later",
     
     // Footer
     'footer.madeWith': 'Made with',

@@ -1,6 +1,6 @@
 import { useState, useEffect, useMemo } from 'react';
 import { motion } from 'framer-motion';
-import { ChevronDown, Github, Linkedin, Mail, Download } from 'lucide-react';
+import { Github, Linkedin, Mail, Download } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
 const Hero = () => {
@@ -38,9 +38,9 @@ const Hero = () => {
   }, [text, isDeleting, loopNum, typingSpeed, words]);
 
   const socialLinks = [
-    { icon: Github, href: '#', label: 'GitHub' },
-    { icon: Linkedin, href: '#', label: 'LinkedIn' },
-    { icon: Mail, href: '#contact', label: 'Email' },
+    { icon: Github, href: 'https://github.com/CristoferBV', label: 'GitHub' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/in/cristofer-barrios-valverde-057927274/', label: 'LinkedIn' },
+    { icon: Mail, href: 'mailto:barriosvalverdecristofer@gmail.com', label: 'Email' },
   ];
 
   const handleDownloadCV = () => {
@@ -96,7 +96,7 @@ const Hero = () => {
           >
             {t('hero.greeting')}{' '}
             <span className="bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-              Cristofer Barrios
+              Cristofer Barrios V
             </span>
           </motion.h1>
 
@@ -139,18 +139,9 @@ const Hero = () => {
           </motion.div>
         </motion.div>
 
-        {/* Chevron */}
-        <motion.div
-          className="absolute bottom-24 left-2/4 -translate-x-1/2 -mb-20"
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity }}
-        >
-          <ChevronDown className="text-gray-400" size={32} />
-        </motion.div>
-
       </div>
 
-      {/* Social Links fixed at bottom */}
+    {/* Social Links fixed at bottom */}
     <motion.div
       className="absolute bottom-10 -translate-x-1/2 flex justify-center gap-5 z-10"
       initial={{ opacity: 0, y: 30 }}
