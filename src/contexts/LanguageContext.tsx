@@ -53,6 +53,23 @@ const translations: Translations = {
     'projects.viewCode': 'Ver Código',
     'projects.viewDemo': 'Ver Demo',
     'projects.technologies': 'Tecnologías Utilizadas',
+
+    // Descripciones de proyectos
+    'projects.faceSecurityGuard.description': 'Seguridad facial con OpenCV y Python',
+    'projects.faceSecurityGuard.longDescription': 'Una aplicación de seguridad facial que utiliza OpenCV y Python para detectar y reconocer rostros en tiempo real. Incluye características como autenticación de usuarios y gestión de acceso.',
+
+    'projects.pauna.description': 'Portal exclusivo para la biblioteca y administración del Campus Coto de la Universidad Nacional de Costa Rica.',
+    'projects.pauna.longDescription': 'Un sistema integral para la gestión de la biblioteca y administración del campus, que permite a los estudiantes acceder a recursos académicos, gestionar préstamos y consultar información relevante. Incluye un panel de administración para gestionar usuarios y recursos.',
+
+    'projects.transcriptImages.description': 'OCR para documentos de construcción',
+    'projects.transcriptImages.longDescription': 'Una aplicación web integral para dispositivos móviles diseñada para que las empresas de construcción de muebles capturen, procesen y organicen documentos de construcción utilizando tecnología OCR.',
+
+    'projects.walletCompass.description': 'Simulación de billetera virtual con tarjetas, cédulas y carné estudiantil.',
+    'projects.walletCompass.longDescription': 'Una aplicación móvil que simula una billetera virtual, permitiendo a los usuarios gestionar sus tarjetas, cédulas y carnets estudiantiles de manera eficiente.',
+
+    'projects.serversRedes.description': 'Sistema P2P con múltiples servidores y clientes',
+    'projects.serversRedes.longDescription': 'Este proyecto implementa un sistema peer-to-peer (P2P) con múltiples servidores y clientes. El servidor almacena videos en una ruta local y gestiona solicitudes de descarga mediante TCP.',
+
     
     // Contact
     'contact.title': 'Trabajemos',
@@ -128,6 +145,23 @@ const translations: Translations = {
     'projects.viewCode': 'View Code',
     'projects.viewDemo': 'View Demo',
     'projects.technologies': 'Technologies Used',
+
+    // Project descriptions
+    'projects.faceSecurityGuard.description': 'Facial security with OpenCV and Python',
+    'projects.faceSecurityGuard.longDescription': 'A facial security application using OpenCV and Python to detect and recognize faces in real-time. Includes features like user authentication and access control.',
+
+    'projects.pauna.description': 'Exclusive portal for the library and administration of the UNA Coto Campus.',
+    'projects.pauna.longDescription': 'A comprehensive system for managing the campus library and administration, allowing students to access academic resources, manage loans, and consult relevant information. Includes an admin panel to manage users and resources.',
+
+    'projects.transcriptImages.description': 'OCR for construction documents',
+    'projects.transcriptImages.longDescription': 'A mobile-friendly web application designed for furniture construction companies to capture, process, and organize construction documents using OCR technology.',
+
+    'projects.walletCompass.description': 'Virtual wallet simulation with ID and student cards.',
+    'projects.walletCompass.longDescription': 'A mobile app that simulates a virtual wallet, allowing users to manage their cards, IDs, and student cards efficiently.',
+
+    'projects.serversRedes.description': 'P2P system with multiple servers and clients',
+    'projects.serversRedes.longDescription': 'This project implements a peer-to-peer (P2P) system with multiple servers and clients. The server stores videos locally and handles download requests via TCP.',
+
     
     // Contact
     'contact.title': 'Let\'s Work',
@@ -154,7 +188,7 @@ const translations: Translations = {
     // Footer
     'footer.madeWith': 'Made with',
     'footer.by': 'by Your Name',
-    'footer.rights': 'All rights reserved.',
+    'footer.rights': 'Cristofer Barrios Valverde.',
     'footer.tagline': 'Transforming ideas into extraordinary digital experiences',
   },
 };

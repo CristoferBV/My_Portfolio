@@ -4,7 +4,7 @@ import { Github, Linkedin, Mail, Download } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
 const Hero = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const [text, setText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
   const [loopNum, setLoopNum] = useState(0);
@@ -44,14 +44,16 @@ const Hero = () => {
   ];
 
   const handleDownloadCV = () => {
+    const lang = language || 'en';
+    const fileName = lang === 'es' ? '/cv-es.pdf' : '/cv-en.pdf';
     const link = document.createElement('a');
-    link.href = '/cv.pdf';
+    link.href = fileName;
     link.download = 'Cristofer-CV.pdf';
     link.click();
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden scroll-mt-36 md:scroll-mt-18">
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=%2260%22 height=%2260%22 viewBox=%220 0 60 60%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cg fill=%22none%22 fill-rule=%22evenodd%22%3E%3Cg fill=%22%23ffffff%22 fill-opacity=%220.05%22%3E%3Ccircle cx=%227%22 cy=%227%22 r=%221%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-50"></div>

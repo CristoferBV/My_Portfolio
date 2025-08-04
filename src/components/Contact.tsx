@@ -113,8 +113,8 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-gray-800" ref={ref}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="contact" className="py-20 bg-gray-800 scroll-mt-36 md:scroll-mt-18" ref={ref}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 overflow-x-hidden">
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -138,7 +138,7 @@ const Contact = () => {
           </motion.p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-5 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
           <motion.div
             variants={containerVariants}
             initial="hidden"
@@ -168,12 +168,14 @@ const Contact = () => {
                       href={info.href}
                       className="flex items-center space-x-4 p-4 bg-gray-900/30 backdrop-blur-sm border border-gray-700/50 rounded-xl hover:border-indigo-400/50 transition-all group"
                     >
-                      <div className="w-12 h-12 bg-indigo-600/20 rounded-lg flex items-center justify-center group-hover:bg-indigo-600/30 transition-colors">
-                        <Icon className="text-indigo-400" size={20} />
+                      <div className="w-12 h-12 min-w-[3rem] min-h-[3rem] bg-indigo-600/20 rounded-lg flex items-center justify-center group-hover:bg-indigo-600/30 transition-colors">
+                        <Icon className="text-indigo-400 w-6 h-6" />
                       </div>
-                      <div>
+                      <div className="flex-1 min-w-0">
                         <p className="text-gray-400 text-sm font-medium">{info.label}</p>
-                        <p className="text-white font-semibold">{info.value}</p>
+                        <p className="text-white font-semibold break-words whitespace-normal text-sm sm:text-base overflow-hidden">
+                          {info.value}
+                        </p>
                       </div>
                     </motion.a>
                   );
@@ -215,7 +217,8 @@ const Contact = () => {
           >
             <motion.div
               variants={itemVariants}
-              className="bg-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8"
+              className="w-full max-w-3xl mx-auto bg-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-6 sm:p-8"
+
             >
               {alertMessage && (
                 <div

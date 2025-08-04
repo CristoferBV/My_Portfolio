@@ -11,8 +11,8 @@ const About = () => {
   });
 
   const stats = [
-    { icon: Code2, value: '6+', label: t('about.stat1') },
-    { icon: Users, value: '3+', label: t('about.stat2') },
+    { icon: Code2, value: '4+', label: t('about.stat1') },
+    { icon: Users, value: '2+', label: t('about.stat2') },
     { icon: Award, value: '1', label: t('about.stat3') },
     { icon: Coffee, value: '∞', label: t('about.stat4') },
   ];
@@ -39,7 +39,7 @@ const About = () => {
   };
 
   return (
-    <section id="about" className="py-20 bg-gray-900" ref={ref}>
+    <section id="about" className="py-20 bg-gray-900 scroll-mt-36 md:scroll-mt-18" ref={ref}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-18 mb-18">
         <motion.div
           variants={containerVariants}
@@ -64,7 +64,7 @@ const About = () => {
           <motion.div variants={itemVariants} className="relative">
             <div className="relative w-full h-96 bg-gradient-to-br from-indigo-600 to-purple-600 rounded-2xl overflow-hidden">
               
-              {/* Imagen centrada */}
+              {/* Centered image */}
               <img
                 src="/Cristofer Barrios Valverde.png"
                 alt="Cristofer Barrios Valverde"

@@ -49,9 +49,11 @@ const Navigation = () => {
   const scrollToSection = (sectionId: string) => {
     const section = document.getElementById(sectionId);
     if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
+      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      setTimeout(() => {
+        setIsOpen(false);
+      }, 500);
     }
-    setIsOpen(false);
   };
 
   return (

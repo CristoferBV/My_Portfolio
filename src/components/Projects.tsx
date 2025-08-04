@@ -5,20 +5,20 @@ import { Github, X, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
 const Projects = () => {
-  const { t } = useLanguage();
   const [ref, inView] = useInView({
     threshold: 0.1,
     triggerOnce: true,
   });
   
   const [selectedProject, setSelectedProject] = useState<number | null>(null);
+  const { t } = useLanguage();
 
   const projects = [
     {
       id: 1,
       title: 'Face Security Guard',
-      description: 'Seguridad facial con OpenCV y Python',
-      longDescription: 'Una aplicación de seguridad facial que utiliza OpenCV y Python para detectar y reconocer rostros en tiempo real. Incluye características como autenticación de usuarios y gestión de acceso.',
+      description: t('projects.faceSecurityGuard.description'),
+      longDescription: t('projects.faceSecurityGuard.longDescription'),
       image: '/Face Security Guard.jpeg',
       technologies: ['Python', 'OpenCV', 'MongoDB', 'AI', 'Machine Learning'],
       github: 'https://github.com/jocscriptch/Face_Security_Guard',
@@ -28,8 +28,8 @@ const Projects = () => {
     {
       id: 2,
       title: 'System PAUNA',
-      description: 'Portal exclusivo para la biblioteca y administración del Campus Coto de la Universidad Nacional de Costa Rica.',
-      longDescription: 'Un sistema integral para la gestión de la biblioteca y administración del campus, que permite a los estudiantes acceder a recursos académicos, gestionar préstamos y consultar información relevante. Incluye un panel de administración para gestionar usuarios y recursos.',
+      description: t('projects.pauna.description'),
+      longDescription: t('projects.pauna.longDescription'),
       image: '/System PAUNA.png',
       technologies: ['React', 'Next.js', 'MySQL', 'Bootstrap', 'Node.js'],
       github: 'https://github.com/CristoferBV/system_pauna',
@@ -38,9 +38,9 @@ const Projects = () => {
     },
     {
       id: 3,
-      title: 'TranscriptImages',
-      description: 'OCR para documentos de construcción',
-      longDescription: 'Una aplicación web integral para dispositivos móviles diseñada para que las empresas de construcción de muebles capturen, procesen y organicen documentos de construcción utilizando tecnología OCR.',
+      title: 'Transcript Images',
+      description: t('projects.transcriptImages.description'),
+      longDescription: t('projects.transcriptImages.longDescription'),
       image: '/Transcript Images.png',
       technologies: ['React', 'Vite', 'Tailwind CSS', 'Firebase', 'Google Cloud Vision API'],
       github: 'https://github.com/CristoferBV/TranscriptImages',
@@ -49,9 +49,9 @@ const Projects = () => {
     },
     {
       id: 4,
-      title: 'WalletCompass',
-      description: 'Simulacion de billetera virtual con tarjetas, cedulas y carnet estudiantil.',
-      longDescription: 'Una aplicación movil que simula una billetera virtual, permitiendo a los usuarios gestionar sus tarjetas, cédulas y carnets estudiantiles de manera eficiente.',
+      title: 'Wallet Compass',
+      description: t('projects.walletCompass.description'),
+      longDescription: t('projects.walletCompass.longDescription'),
       image: '/WalletCompass.jpeg',
       technologies: ['Dart', 'Flutter', 'Firebase'],
       github: 'https://github.com/AndreyBV5/walletcompass_project',
@@ -61,8 +61,8 @@ const Projects = () => {
     {
       id: 5,
       title: 'Servidores Redes',
-      description: 'Sistema P2P con múltiples servidores y clientes',
-      longDescription: 'Este proyecto implementa un sistema peer-to-peer (P2P) con múltiples servidores y clientes. El servidor almacena videos en una ruta local y gestiona solicitudes de descarga mediante TCP.',
+      description: t('projects.serversRedes.description'),
+      longDescription: t('projects.serversRedes.longDescription'),
       image: '/Servidores Redes.jpeg',
       technologies: ['Python', 'VS Code', 'TCP/IP', 'P2P', 'Sockets'],
       github: 'https://github.com/AndreyBV5/Proyecto_Servidores_Redes',
@@ -115,7 +115,7 @@ const Projects = () => {
   };
 
   return (
-    <section id="projects" className="py-20 bg-gray-900" ref={ref}>
+    <section id="projects" className="py-20 bg-gray-900 scroll-mt-36 md:scroll-mt-18" ref={ref}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           variants={containerVariants}
