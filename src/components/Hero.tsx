@@ -44,12 +44,17 @@ const Hero = () => {
   ];
 
   const handleDownloadCV = () => {
-    const lang = language || 'en';
-    const fileName = lang === 'es' ? '/public/CV Cristofer Barrios Valverde.pdf' : '/public/Resume Cristofer Barrios Valverde.pdf';
-    const link = document.createElement('a');
-    link.href = fileName;
-    link.download = 'Cristofer-CV.pdf';
+    const lang = language || "en";
+    const file = lang === "es" ? "cv-es.pdf" : "cv-en.pdf";
+
+    const url = `${import.meta.env.BASE_URL}${file}`;
+
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = "Cristofer-CV.pdf";
+    document.body.appendChild(link);
     link.click();
+    link.remove();
   };
 
   return (
