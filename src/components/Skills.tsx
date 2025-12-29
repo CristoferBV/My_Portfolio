@@ -29,10 +29,8 @@ const Skills = () => {
       title: t('skills.backend'),
       skills: [
         { name: 'Node.js', level: 80 },
-        { name: 'Express', level: 75 },
         { name: 'Django', level: 85 },
         { name: 'Python', level: 80 },
-        { name: 'PHP', level: 65 },
         { name: 'Postman', level: 90 },
         { name: 'MySQL', level: 80 },
         { name: 'MongoDB', level: 70 },
