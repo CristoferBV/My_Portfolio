@@ -45,7 +45,7 @@ const Hero = () => {
 
   const handleDownloadCV = () => {
     const lang = language || 'en';
-    const fileName = lang === 'es' ? '/CV Cristofer Barrios Valverde.pdf' : '/Resume Cristofer Barrios Valverde.pdf';
+    const fileName = lang === 'es' ? '/public/CV Cristofer Barrios Valverde.pdf' : '/public/Resume Cristofer Barrios Valverde.pdf';
     const link = document.createElement('a');
     link.href = fileName;
     link.download = 'Cristofer-CV.pdf';
